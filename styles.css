@@ -1,0 +1,215 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #c3cbdc;
+  background-image: linear-gradient(147deg, #c3cbdc 0%, #edf1f4 74%);
+}
+/* img {
+  height: 250px;
+  width: 100%;
+  object-fit: cover;
+} */
+.mobile-container {
+  background-color: white;
+  width: 400px;
+  max-width: 100%;
+  margin: 1rem;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+header input {
+  border-radius: 3px;
+  border: none;
+  background-color: #dedede;
+  padding: 0.5rem 1rem;
+}
+header button {
+  /* padding: 0.4rem; */
+  border: none;
+  font-size: 1.5rem;
+  color: #aaa;
+  margin-left: 10px;
+  background-color: transparent;
+}
+.fav-container {
+  text-align: center;
+  padding: 0.5rem;
+  background-color: #d5fff7;
+  /* width: 100%; */
+  /* position: relative; */
+  /* overflow: hidden; */
+}
+.fav-container h3 {
+  margin: 0;
+}
+.stories {
+  /* background-color: #ffffff; */
+  border-radius: 5px;
+  padding: 0.5rem;
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 10px;
+}
+.stories::-webkit-scrollbar {
+  display: none;
+}
+.stories img {
+  border: 1px solid white;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+}
+.stories span {
+  display: inline-block;
+  font-size: 14px;
+  white-space: nowrap;
+  width: 75px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.stories li:hover span {
+  overflow: normal;
+  white-space: normal;
+}
+.stories {
+  list-style: none;
+  padding: 0;
+}
+.stories li {
+  text-align: center;
+  position: relative;
+}
+ul li img {
+  width: 75px;
+  height: 75px;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+  cursor: pointer;
+}
+.close-favmeal {
+  position: absolute;
+  top: 0;
+  right: 0px;
+  border: 1px solid black;
+  padding: 2px 4px;
+  border-radius: 50%;
+  font-size: 14px;
+  background-color: white;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.15s;
+}
+ul li:hover {
+  .close-favmeal {
+    opacity: 1;
+  }
+}
+.meal {
+  margin: 1.5rem;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+}
+.meal-header {
+  position: relative;
+  cursor: pointer;
+}
+.random-recipe {
+  position: absolute;
+  background-color: white;
+  top: 1rem;
+  padding: 0.25rem 0.5rem;
+  font-size: 15px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+.meal-header img {
+  height: 250px;
+  width: 100%;
+  object-fit: cover;
+}
+.meal-body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+.meal-body h4 {
+  margin: 0;
+}
+.meal-body button {
+  background-color: transparent;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+.popup {
+  position: fixed;
+  top: 0px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /* width: 100%;
+  height: 100%; */
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* opacity: 0; */
+}
+/* there cannot be space between two classes */
+.popup.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+.desc-container {
+  position: relative;
+  background-color: white;
+  max-width: 500px;
+  max-height: 100vh;
+  width: 100%;
+  padding: 0 2rem;
+  margin: 1rem;
+  overflow: auto;
+}
+.desc-container::-webkit-scrollbar {
+  display: none;
+}
+.desc-container h2 {
+  text-align: center;
+}
+.desc-container img {
+  height: 50vh;
+  width: 100%;
+  object-fit: cover;
+}
+/* .desc-container p {
+  font-size: 12px;
+}
+.desc-container li {
+  font-size: 10px;
+} */
+.close-popup {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  border: 1px solid black;
+  padding: 2px 4px;
+  border-radius: 50%;
+  font-size: 12px;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
